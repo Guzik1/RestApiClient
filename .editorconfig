@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS1668: Określono nieprawidłową ścieżkę wyszukiwania „A:\hla\hlalib” w elemencie „zmienna środowiskowa LIB” — „katalog nie istnieje”
+dotnet_diagnostic.CS1668.severity = warning
