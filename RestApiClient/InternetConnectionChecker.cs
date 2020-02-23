@@ -5,8 +5,15 @@ using System.Text;
 
 namespace RestApiClient
 {
+    /// <summary>
+    /// Checker internet connection.
+    /// </summary>
     public static class InternetConnectionChecker
     {
+        /// <summary>
+        /// Check machine has been connected to network.
+        /// </summary>
+        /// <returns>True when internet connection availbale, else return false.</returns>
         public static bool Check()
         {
             try

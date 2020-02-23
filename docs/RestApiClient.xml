@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestApiClient</name>
+    </assembly>
+    <members>
+        <member name="T:RestApiClient.IAddOwnHeaderToRequest">
+            <summary>
+            Interface to add own header.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.IAddOwnHeaderToRequest.AddOwnHeader">
+            <summary>
+            Method to add own header without post request. Call before message send.
+            </summary>
+            <returns>Dictionary where key is header name and value is header value.</returns>
+        </member>
+        <member name="M:RestApiClient.IAddOwnHeaderToRequest.AddOwnHeaderPOST(System.Object)">
+            <summary>
+            Method to add own header to post request. Call before message send.
+            </summary>
+            <returns>Dictionary where key is header name and value is header value.</returns>
+        </member>
+        <member name="T:RestApiClient.InternetConnectionChecker">
+            <summary>
+            Checker internet connection.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.InternetConnectionChecker.Check">
+            <summary>
+            Check machine has been connected to network.
+            </summary>
+            <returns>True when internet connection availbale, else return false.</returns>
+        </member>
+        <member name="T:RestApiClient.IResponseChecker">
+            <summary>
+            Implement interface to check a response message.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.IResponseChecker.CheckResponseIsOk(System.String)">
+            <summary>
+            Check response message is a corectly. 
+            </summary>
+            <param name="response">Response message</param>
+            <returns>True when response is ok, else return false.</returns>
+        </member>
+        <member name="T:RestApiClient.IResponseDeserializer`1">
+            <summary>
+            Interface, own response deserializer form string response.
+            </summary>
+            <typeparam name="T">Type of deserialized data.</typeparam>
+        </member>
+        <member name="M:RestApiClient.IResponseDeserializer`1.Deserialize(System.String)">
+            <summary>
+            Deserialize a response message from string to generic object.
+            </summary>
+            <param name="input">string response message.</param>
+            <returns>Object of T data.</returns>
+        </member>
+        <member name="T:RestApiClient.RestClient">
+            <summary>
+            Rest client manager.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.RestClient.#ctor(System.String)">
+            <summary>
+            Inicjalize rest client with api url.
+            </summary>
+            <param name="apiUri">Api url.</param>
+        </member>
+        <member name="M:RestApiClient.RestClient.SendGET">
+            <summary>
+            Send get request.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.RestClient.SendPOST``1(``0)">
+            <summary>
+            Send post request with data.
+            </summary>
+            <typeparam name="T">Type of data to send</typeparam>
+            <param name="dataToSend">generic object data to send (type T).</param>
+        </member>
+        <member name="M:RestApiClient.RestClient.SendDELETE">
+            <summary>
+            Send delete request.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.RestClient.SendPUT``1(``0)">
+            <summary>
+            Send put request with data.
+            </summary>
+            <typeparam name="T">Type of data to send</typeparam>
+            <param name="dataToSend">generic object data to send (type T).</param>
+        </member>
+        <member name="P:RestApiClient.RestClient.ResponseHasSuccessStatusCode">
+            <summary>
+            Response has success status code.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.RestClient.ResponseHasNoErrors">
+            <summary>
+            Check response has no errors.
+            </summary>
+            <returns>True when response have no error, or false in else.</returns>
+        </member>
+        <member name="M:RestApiClient.RestClient.ResponseHasNoErrors(RestApiClient.IResponseChecker)">
+            <summary>
+            Check response has no errors, with own response checker.
+            </summary>
+            <returns>True when response have no error, or false in else.</returns>
+        </member>
+        <member name="P:RestApiClient.RestClient.GetStatusCode">
+            <summary>
+            Get response status code.
+            </summary>
+        </member>
+        <member name="P:RestApiClient.RestClient.GetResponseToString">
+            <summary>
+            Get message from response.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.RestClient.GetResponse``1">
+            <summary>
+            Get response generic object from response.
+            </summary>
+            <typeparam name="T">Type of response object data.</typeparam>
+            <returns>Response object</returns>
+        </member>
+        <member name="M:RestApiClient.RestClient.GetResponse``1(RestApiClient.IResponseDeserializer{``0})">
+            <summary>
+            Get response generic object from response, using own response deserializer.
+            </summary>
+            <typeparam name="T">Type of response object data.</typeparam>
+            <returns>Response object</returns>
+        </member>
+        <member name="M:RestApiClient.RestClient.GetResponseDynamic">
+            <summary>
+            Get dynamic object response from responde on request.
+            </summary>
+            <returns>Dynamic response.</returns>
+        </member>
+        <member name="M:RestApiClient.RestClient.WriteResponseInScreen">
+            <summary>
+            Write response in console.
+            </summary>
+        </member>
+        <member name="M:RestApiClient.RestClient.AddOwnHeaderToRequest(RestApiClient.IAddOwnHeaderToRequest)">
+            <summary>
+            Add own headert to request using interface.
+            </summary>
+            <param name="methodAddHeaders">method implemeted interface to add own headers.</param>
+        </member>
+        <member name="M:RestApiClient.RestClient.AddQuery(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Add params to url addres.
+            </summary>
+            <param name="queryObject">key param name, value param value.</param>
+        </member>
+        <member name="M:RestApiClient.RestClient.AddQuery(System.Object)">
+            <summary>
+            Add to url "?query=" + serialized object.
+            </summary>
+            <param name="query">Object to add to url.</param>
+        </member>
+    </members>
+</doc>

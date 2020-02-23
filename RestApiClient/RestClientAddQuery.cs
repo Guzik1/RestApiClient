@@ -8,6 +8,10 @@ namespace RestApiClient
 {
     public partial class RestClient
     {
+        /// <summary>
+        /// Add params to url addres.
+        /// </summary>
+        /// <param name="queryObject">key param name, value param value.</param>
         public void AddQuery(Dictionary<string, string> queryObject)
         {
             UriBuilder builder = new UriBuilder(apiUri);
@@ -20,6 +24,10 @@ namespace RestApiClient
             apiUri = builder.ToString();
         }
 
+        /// <summary>
+        /// Add to url "?query=" + serialized object.
+        /// </summary>
+        /// <param name="query">Object to add to url.</param>
         public void AddQuery(object query)
         {
             string queryObjectString =  Serialize.AsJson(query);

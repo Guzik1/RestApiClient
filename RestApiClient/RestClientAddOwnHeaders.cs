@@ -8,6 +8,10 @@ namespace RestApiClient
     {
         IAddOwnHeaderToRequest AddHeaderMethod;
 
+        /// <summary>
+        /// Add own headert to request using interface.
+        /// </summary>
+        /// <param name="methodAddHeaders">method implemeted interface to add own headers.</param>
         public void AddOwnHeaderToRequest(IAddOwnHeaderToRequest methodAddHeaders)
         {
             AddHeaderMethod = methodAddHeaders;
