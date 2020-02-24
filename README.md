@@ -11,6 +11,7 @@ This project is a simple to use Rest api in c#.
 - Generic desiaralization response message.
 
 ## Setup
+[Nuget package](https://www.nuget.org/packages/GRestApiClient/). <br />
 Compiling bin library is located in /bin folder. <br />
 Copy files (.dll files) to your project.<br />
 
@@ -26,7 +27,7 @@ ResponseObject response;
 if (client.ResponseHasNoErrors())
   response = client.GetResponse<ResponseObject>();
 ```
-For view examples click [here](https://github.com/Guzik1/RestApiClient_for_.Net/tree/master/Examples).
+For view examples click [here](https://github.com/Guzik1/RestApiClient_for_.Net/tree/master/Examples). <br />
 Documentatio available [here](https://github.com/Guzik1/RestApiClient_for_.Net/blob/master/docs/RestApiClient.md).
 
 ## Built with
