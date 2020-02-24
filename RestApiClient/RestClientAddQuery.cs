@@ -9,7 +9,7 @@ namespace RestApiClient
     public partial class RestClient
     {
         /// <summary>
-        /// Add params to url addres.
+        /// Add query params to url addres.
         /// </summary>
         /// <param name="queryObject">key param name, value param value.</param>
         public void AddQuery(Dictionary<string, string> queryObject)
