@@ -152,7 +152,7 @@
         </member>
         <member name="M:RestApiClient.RestClient.AddQuery(System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>
-            Add params to url addres.
+            Add query params to url addres.
             </summary>
             <param name="queryObject">key param name, value param value.</param>
         </member>
