@@ -33,6 +33,7 @@ Documentatio available [here](https://github.com/Guzik1/RestApiClient_for_.Net/b
 ## Built with
 - .Net Core 3.1
 - NUnit Framework (for testing)
+- [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) (JSON deserializing, MIT license)
 
 ## Status
 Version: 1.0.0
