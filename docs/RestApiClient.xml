@@ -21,17 +21,6 @@
             </summary>
             <returns>Dictionary where key is header name and value is header value.</returns>
         </member>
-        <member name="T:RestApiClient.InternetConnectionChecker">
-            <summary>
-            Checker internet connection.
-            </summary>
-        </member>
-        <member name="M:RestApiClient.InternetConnectionChecker.Check">
-            <summary>
-            Check machine has been connected to network.
-            </summary>
-            <returns>True when internet connection availbale, else return false.</returns>
-        </member>
         <member name="T:RestApiClient.IResponseChecker">
             <summary>
             Implement interface to check a response message.

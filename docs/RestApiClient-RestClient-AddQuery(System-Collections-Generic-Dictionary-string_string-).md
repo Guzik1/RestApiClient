@@ -1,7 +1,7 @@
 #### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient').[RestClient](./RestApiClient-RestClient.md 'RestApiClient.RestClient')
 ## RestClient.AddQuery(System.Collections.Generic.Dictionary&lt;string,string&gt;) Method
-Add params to url addres.  
+Add query params to url addres.  
 ```csharp
 public void AddQuery(System.Collections.Generic.Dictionary<string,string> queryObject);
 ```

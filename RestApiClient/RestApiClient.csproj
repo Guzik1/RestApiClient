@@ -6,7 +6,14 @@
     <Description>Simple rest client for c#.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/Guzik1/RestApiClient_for_.Net</RepositoryUrl>
-    <RepositoryType>GITHUB</RepositoryType>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageId>GRestApiClient</PackageId>
+    <Authors>Sebastian Guzik</Authors>
+    <Company>Sebastian Guzik</Company>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <PackageReleaseNotes>Add no internet connection exception.</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/Guzik1/RestApiClient_for_.Net</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

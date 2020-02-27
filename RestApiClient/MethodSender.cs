@@ -17,7 +17,14 @@ namespace RestApiClient
 
         internal HttpResponseMessage GetMethod(string apiUrl) 
         {
-            return client.GetAsync(apiUrl).Result;
+            try
+            {
+                return client.GetAsync(apiUrl).Result;
+            }
+            catch
+            {
+                throw new NoInternetConnectionException("Connection cannot be established.");
+            }
         }
 
         internal HttpResponseMessage PostMethod<T>(T data, string apiUrl)
@@ -25,12 +32,26 @@ namespace RestApiClient
             string json = Serialize.AsJson(data);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            return client.PostAsync(apiUrl, content).Result;
+            try
+            {
+                return client.PostAsync(apiUrl, content).Result;
+            }
+            catch
+            {
+                throw new NoInternetConnectionException("Connection cannot be established.");
+            }
         }
 
         internal HttpResponseMessage DeleteMethod(string apiUrl)
         {
-            return client.DeleteAsync(apiUrl).Result;
+            try
+            {
+                return client.DeleteAsync(apiUrl).Result;
+            }
+            catch
+            {
+                throw new NoInternetConnectionException("Connection cannot be established.");
+            }
         }
 
         internal HttpResponseMessage PutMethod<T>(T data, string apiUrl)
@@ -38,7 +59,14 @@ namespace RestApiClient
             string json = Serialize.AsJson(data);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            return client.PutAsync(apiUrl, content).Result;
+            try
+            {
+                return client.PutAsync(apiUrl, content).Result;
+            }
+            catch
+            {
+                throw new NoInternetConnectionException("Connection cannot be established.");
+            }
         }
     }
 }
