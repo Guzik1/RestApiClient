@@ -12,7 +12,8 @@ namespace RestApiClient
         /// Add query params to url addres.
         /// </summary>
         /// <param name="queryObject">key param name, value param value.</param>
-        public void AddQuery(Dictionary<string, string> queryObject)
+        /// <return>Return query string.</return>
+        public string AddQuery(Dictionary<string, string> queryObject)
         {
             UriBuilder builder = new UriBuilder(apiUri);
             NameValueCollection query = HttpUtility.ParseQueryString(builder.Query);
@@ -22,17 +23,22 @@ namespace RestApiClient
 
             builder.Query = query.ToString();
             apiUri = builder.ToString();
+
+            return query.ToString();
         }
 
         /// <summary>
         /// Add to url "?query=" + serialized object.
         /// </summary>
         /// <param name="query">Object to add to url.</param>
-        public void AddQuery(object query)
+        /// <return>String of object.</return>
+        public string AddQuery(object query)
         {
             string queryObjectString =  Serialize.AsJson(query);
 
             apiUri = apiUri + "?query=" + queryObjectString;
+
+            return queryObjectString;
         }
     }
 }

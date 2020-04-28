@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient').[IResponseChecker](./RestApiClient-IResponseChecker.md 'RestApiClient.IResponseChecker')
 ## IResponseChecker.CheckResponseIsOk(string) Method
 Check response message is a corectly.  

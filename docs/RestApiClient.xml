@@ -139,17 +139,26 @@
             </summary>
             <param name="methodAddHeaders">method implemeted interface to add own headers.</param>
         </member>
+        <member name="M:RestApiClient.RestClient.AddOwnHeaderToRequest(System.String,System.String)">
+            <summary>
+             Add one own header.
+            </summary>
+            <param name="key">Param key.</param>
+            <param name="value">Param value.</param>
+        </member>
         <member name="M:RestApiClient.RestClient.AddQuery(System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>
             Add query params to url addres.
             </summary>
             <param name="queryObject">key param name, value param value.</param>
+            <return>Return query string.</return>
         </member>
         <member name="M:RestApiClient.RestClient.AddQuery(System.Object)">
             <summary>
             Add to url "?query=" + serialized object.
             </summary>
             <param name="query">Object to add to url.</param>
+            <return>String of object.</return>
         </member>
     </members>
 </doc>

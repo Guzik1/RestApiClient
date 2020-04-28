@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient').[RestClient](./RestApiClient-RestClient.md 'RestApiClient.RestClient')
 ## RestClient.GetResponse&lt;T&gt;(RestApiClient.IResponseDeserializer&lt;T&gt;) Method
 Get response generic object from response, using own response deserializer.  

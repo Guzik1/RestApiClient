@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient')
 ## IResponseChecker Interface
 Implement interface to check a response message.  

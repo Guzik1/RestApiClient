@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient').[IResponseDeserializer&lt;T&gt;](./RestApiClient-IResponseDeserializer-T-.md 'RestApiClient.IResponseDeserializer&lt;T&gt;')
 ## IResponseDeserializer&lt;T&gt;.Deserialize(string) Method
 Deserialize a response message from string to generic object.  

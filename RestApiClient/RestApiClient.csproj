@@ -10,9 +10,9 @@
     <PackageId>GRestApiClient</PackageId>
     <Authors>Sebastian Guzik</Authors>
     <Company>Sebastian Guzik</Company>
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <PackageReleaseNotes>Add no internet connection exception.</PackageReleaseNotes>
+    <Version>1.2.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <PackageReleaseNotes>AddQuery and AddHeader return parsed string. Add AddOwnHeaderToRequest method to add one header.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/Guzik1/RestApiClient_for_.Net</PackageProjectUrl>
   </PropertyGroup>
 
@@ -22,6 +22,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DefaultDocumentation" Version="0.6.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>

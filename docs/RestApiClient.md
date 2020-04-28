@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ## RestApiClient Namespace
 ### Classes
 - [RestClient](./RestApiClient-RestClient.md 'RestApiClient.RestClient')

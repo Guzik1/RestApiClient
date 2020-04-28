@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient').[RestClient](./RestApiClient-RestClient.md 'RestApiClient.RestClient')
 ## RestClient.AddOwnHeaderToRequest(RestApiClient.IAddOwnHeaderToRequest) Method
 Add own headert to request using interface.  

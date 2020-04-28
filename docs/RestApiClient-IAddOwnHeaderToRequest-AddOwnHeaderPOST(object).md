@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient').[IAddOwnHeaderToRequest](./RestApiClient-IAddOwnHeaderToRequest.md 'RestApiClient.IAddOwnHeaderToRequest')
 ## IAddOwnHeaderToRequest.AddOwnHeaderPOST(object) Method
 Method to add own header to post request. Call before message send.  

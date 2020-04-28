@@ -17,6 +17,16 @@ namespace RestApiClient
             AddHeaderMethod = methodAddHeaders;
         }
 
+        /// <summary>
+        ///  Add one own header.
+        /// </summary>
+        /// <param name="key">Param key.</param>
+        /// <param name="value">Param value.</param>
+        public void AddOwnHeaderToRequest(string key, string value)
+        {
+            client.DefaultRequestHeaders.Add(key, value);
+        }
+
         void AddHeaderToRequest() => AddOwnHeader(AddHeaderMethod?.AddOwnHeader());
 
         void AddHeaderToRequestPost<T>(T dataToSend)
@@ -28,7 +38,7 @@ namespace RestApiClient
                 return;
 
             foreach (KeyValuePair<string, string> header in headers)
-                client.DefaultRequestHeaders.Add(header.Key, header.Value);
+                AddOwnHeaderToRequest(header.Key, header.Value);
         }
     }
 }

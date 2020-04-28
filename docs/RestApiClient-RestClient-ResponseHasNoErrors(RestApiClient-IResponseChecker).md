@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient').[RestClient](./RestApiClient-RestClient.md 'RestApiClient.RestClient')
 ## RestClient.ResponseHasNoErrors(RestApiClient.IResponseChecker) Method
 Check response has no errors, with own response checker.  

@@ -1,4 +1,3 @@
-#### [RestApiClient](./index.md 'index')
 ### [RestApiClient](./RestApiClient.md 'RestApiClient')
 ## IAddOwnHeaderToRequest Interface
 Interface to add own header.  
