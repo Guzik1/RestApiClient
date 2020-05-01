@@ -37,6 +37,50 @@ namespace RestApiClient
         }
 
         /// <summary>
+        /// Send request using checked method.
+        /// </summary>
+        /// <param name="method">Method type.</param>
+        public void Send(MethodsType method)
+        {
+            switch (method)
+            {
+                case MethodsType.GET:
+                    SendGET();
+                    break;
+                case MethodsType.DELETE:
+                    SendDELETE();
+                    break;
+                case MethodsType.POST:
+                    SendPOST<object>(null);
+                    break;
+                case MethodsType.PUT:
+                    SendPUT<object>(null);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Send request with data using checked method.
+        /// </summary>
+        /// <param name="method">Method type.</param>
+        /// <param name="objectToSend">Data to send.</param>
+        public void Send(MethodsType method, object objectToSend = null)
+        {
+            if (method != MethodsType.POST || method != MethodsType.PUT)
+                Send(method);
+
+            switch (method)
+            {
+                case MethodsType.POST:
+                    SendPOST(objectToSend);
+                    break;
+                case MethodsType.PUT:
+                    SendPUT(objectToSend);
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Send get request.
         /// </summary>
         public void SendGET()

@@ -46,6 +46,31 @@
             <param name="input">string response message.</param>
             <returns>Object of T data.</returns>
         </member>
+        <member name="T:RestApiClient.MethodsType">
+            <summary>
+            Request method type.
+            </summary>
+        </member>
+        <member name="F:RestApiClient.MethodsType.GET">
+            <summary>
+            Get.
+            </summary>
+        </member>
+        <member name="F:RestApiClient.MethodsType.POST">
+            <summary>
+            Post.
+            </summary>
+        </member>
+        <member name="F:RestApiClient.MethodsType.DELETE">
+            <summary>
+            Delete.
+            </summary>
+        </member>
+        <member name="F:RestApiClient.MethodsType.PUT">
+            <summary>
+            Put.
+            </summary>
+        </member>
         <member name="T:RestApiClient.RestClient">
             <summary>
             Rest client manager.
@@ -56,6 +81,19 @@
             Inicjalize rest client with api url.
             </summary>
             <param name="apiUri">Api url.</param>
+        </member>
+        <member name="M:RestApiClient.RestClient.Send(RestApiClient.MethodsType)">
+            <summary>
+            Send request using checked method.
+            </summary>
+            <param name="method">Method type.</param>
+        </member>
+        <member name="M:RestApiClient.RestClient.Send(RestApiClient.MethodsType,System.Object)">
+            <summary>
+            Send request with data using checked method.
+            </summary>
+            <param name="method">Method type.</param>
+            <param name="objectToSend">Data to send.</param>
         </member>
         <member name="M:RestApiClient.RestClient.SendGET">
             <summary>

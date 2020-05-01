@@ -21,6 +21,8 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 - [GetResponseDynamic()](./RestApiClient-RestClient-GetResponseDynamic().md 'RestApiClient.RestClient.GetResponseDynamic()')
 - [ResponseHasNoErrors()](./RestApiClient-RestClient-ResponseHasNoErrors().md 'RestApiClient.RestClient.ResponseHasNoErrors()')
 - [ResponseHasNoErrors(RestApiClient.IResponseChecker)](./RestApiClient-RestClient-ResponseHasNoErrors(RestApiClient-IResponseChecker).md 'RestApiClient.RestClient.ResponseHasNoErrors(RestApiClient.IResponseChecker)')
+- [Send(RestApiClient.MethodsType)](./RestApiClient-RestClient-Send(RestApiClient-MethodsType).md 'RestApiClient.RestClient.Send(RestApiClient.MethodsType)')
+- [Send(RestApiClient.MethodsType, object)](./RestApiClient-RestClient-Send(RestApiClient-MethodsType_object).md 'RestApiClient.RestClient.Send(RestApiClient.MethodsType, object)')
 - [SendDELETE()](./RestApiClient-RestClient-SendDELETE().md 'RestApiClient.RestClient.SendDELETE()')
 - [SendGET()](./RestApiClient-RestClient-SendGET().md 'RestApiClient.RestClient.SendGET()')
 - [SendPOST&lt;T&gt;(T)](./RestApiClient-RestClient-SendPOST-T-(T).md 'RestApiClient.RestClient.SendPOST&lt;T&gt;(T)')
