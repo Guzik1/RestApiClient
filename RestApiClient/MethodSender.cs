@@ -21,9 +21,9 @@ namespace RestApiClient
             {
                 return client.GetAsync(apiUrl).Result;
             }
-            catch
+            catch(Exception e)
             {
-                throw new NoInternetConnectionException("Connection cannot be established.");
+                throw new Exception(e.Message);
             }
         }
 
@@ -36,9 +36,9 @@ namespace RestApiClient
             {
                 return client.PostAsync(apiUrl, content).Result;
             }
-            catch
+            catch (Exception e)
             {
-                throw new NoInternetConnectionException("Connection cannot be established.");
+                throw new Exception(e.Message);
             }
         }
 
@@ -48,9 +48,9 @@ namespace RestApiClient
             {
                 return client.DeleteAsync(apiUrl).Result;
             }
-            catch
+            catch (Exception e)
             {
-                throw new NoInternetConnectionException("Connection cannot be established.");
+                throw new Exception(e.Message);
             }
         }
 
@@ -63,9 +63,9 @@ namespace RestApiClient
             {
                 return client.PutAsync(apiUrl, content).Result;
             }
-            catch
+            catch (Exception e)
             {
-                throw new NoInternetConnectionException("Connection cannot be established.");
+                throw new Exception(e.Message);
             }
         }
     }
