@@ -10,12 +10,7 @@ namespace RestApiClient
     {
         internal static string AsJson(object data)
         {
-            JsonSerializerSettings settings = new JsonSerializerSettings()
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
-            };
-
-            return JsonConvert.SerializeObject(data, settings);
+            return JsonConvert.SerializeObject(data, Deserialize.GenerateSettings());
         }
     }
 }

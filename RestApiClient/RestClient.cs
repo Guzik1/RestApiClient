@@ -31,6 +31,7 @@ namespace RestApiClient
         {
             this.apiUri = apiUri;
 
+            client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             ms = new MethodSender(client);

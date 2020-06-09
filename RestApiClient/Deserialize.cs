@@ -10,22 +10,24 @@ namespace RestApiClient
     {
         internal static T FromJson<T>(string jsonString)
         {
-            JsonSerializerSettings settings = new JsonSerializerSettings()
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
-            };
-
-            return JsonConvert.DeserializeObject<T>(jsonString, settings);
+            return JsonConvert.DeserializeObject<T>(jsonString, GenerateSettings());
         }
 
         internal static dynamic FromJson(string jsonString)
+        {
+            return JsonConvert.DeserializeObject(jsonString, GenerateSettings());
+        }
+
+        internal static JsonSerializerSettings GenerateSettings()
         {
             JsonSerializerSettings settings = new JsonSerializerSettings()
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
 
-            return JsonConvert.DeserializeObject(jsonString, settings);
+            settings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+
+            return settings;
         }
     }
 }
