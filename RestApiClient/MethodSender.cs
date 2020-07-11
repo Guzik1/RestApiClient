@@ -27,10 +27,16 @@ namespace RestApiClient
             }
         }
 
-        internal HttpResponseMessage PostMethod<T>(T data, string apiUrl)
+        internal HttpResponseMessage PostMethod<T>(T data, string apiUrl, bool serialize = true)
         {
-            string json = Serialize.AsJson(data);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            StringContent content;
+            if (serialize)
+            {
+                string json = Serialize.AsJson(data);
+                content = new StringContent(json, Encoding.UTF8, "application/json");
+            }
+            else
+                content = new StringContent(data.ToString(), Encoding.UTF8, "application/json");
 
             try
             {
@@ -54,10 +60,16 @@ namespace RestApiClient
             }
         }
 
-        internal HttpResponseMessage PutMethod<T>(T data, string apiUrl)
+        internal HttpResponseMessage PutMethod<T>(T data, string apiUrl, bool serialize = true)
         {
-            string json = Serialize.AsJson(data);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            StringContent content;
+            if (serialize)
+            {
+                string json = Serialize.AsJson(data);
+                content = new StringContent(json, Encoding.UTF8, "application/json");
+            }
+            else
+                content = new StringContent(data.ToString(), Encoding.UTF8, "application/json");
 
             try
             {

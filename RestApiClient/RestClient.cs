@@ -95,10 +95,11 @@ namespace RestApiClient
         /// </summary>
         /// <typeparam name="T">Type of data to send</typeparam>
         /// <param name="dataToSend">generic object data to send (type T).</param>
-        public void SendPOST<T>(T dataToSend)
+        /// <param name="serializeData">True: serialize dataToSend and add to body request, false: add raw dataToSend to request body.</param>
+        public void SendPOST<T>(T dataToSend, bool serializeData = true)
         {
             AddHeaderToRequestPost<T>(dataToSend);
-            response = ms.PostMethod<T>(dataToSend, apiUri);
+            response = ms.PostMethod<T>(dataToSend, apiUri, serializeData);
         }
 
         /// <summary>
@@ -115,10 +116,11 @@ namespace RestApiClient
         /// </summary>
         /// <typeparam name="T">Type of data to send</typeparam>
         /// <param name="dataToSend">generic object data to send (type T).</param>
-        public void SendPUT<T>(T dataToSend)
+        /// <param name="serializeData">True: serialize dataToSend and add to body request, false: add raw dataToSend to request body.</param>
+        public void SendPUT<T>(T dataToSend, bool serializeData = true)
         {
             AddHeaderToRequest();
-            response = ms.PutMethod<T>(dataToSend, apiUri);
+            response = ms.PutMethod<T>(dataToSend, apiUri, serializeData);
         }
 
         internal HttpClient GetHttpClient => client;

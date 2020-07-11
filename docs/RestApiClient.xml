@@ -100,24 +100,26 @@
             Send get request.
             </summary>
         </member>
-        <member name="M:RestApiClient.RestClient.SendPOST``1(``0)">
+        <member name="M:RestApiClient.RestClient.SendPOST``1(``0,System.Boolean)">
             <summary>
             Send post request with data.
             </summary>
             <typeparam name="T">Type of data to send</typeparam>
             <param name="dataToSend">generic object data to send (type T).</param>
+            <param name="serializeData">True: serialize dataToSend and add to body request, false: add raw dataToSend to request body.</param>
         </member>
         <member name="M:RestApiClient.RestClient.SendDELETE">
             <summary>
             Send delete request.
             </summary>
         </member>
-        <member name="M:RestApiClient.RestClient.SendPUT``1(``0)">
+        <member name="M:RestApiClient.RestClient.SendPUT``1(``0,System.Boolean)">
             <summary>
             Send put request with data.
             </summary>
             <typeparam name="T">Type of data to send</typeparam>
             <param name="dataToSend">generic object data to send (type T).</param>
+            <param name="serializeData">True: serialize dataToSend and add to body request, false: add raw dataToSend to request body.</param>
         </member>
         <member name="P:RestApiClient.RestClient.ResponseHasSuccessStatusCode">
             <summary>
@@ -190,6 +192,14 @@
             </summary>
             <param name="queryObject">key param name, value param value.</param>
             <return>Return query string.</return>
+        </member>
+        <member name="M:RestApiClient.RestClient.AddStringToEndOfQuery(System.String,System.Char)">
+            <summary>
+            Add string to end of query in url.
+            </summary>
+            <param name="query">String to add to end of query.</param>
+            <param name="connectChar">Connection char.</param>
+            <returns>All query params string.</returns>
         </member>
         <member name="M:RestApiClient.RestClient.AddQuery(System.Object)">
             <summary>
