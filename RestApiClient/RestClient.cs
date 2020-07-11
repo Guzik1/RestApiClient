@@ -65,7 +65,7 @@ namespace RestApiClient
         /// </summary>
         /// <param name="method">Method type.</param>
         /// <param name="objectToSend">Data to send.</param>
-        public void Send(MethodsType method, object objectToSend = null)
+        public void Send(MethodsType method, object objectToSend = null, bool serializeDataToSend = true)
         {
             if (method != MethodsType.POST || method != MethodsType.PUT)
                 Send(method);
@@ -73,10 +73,10 @@ namespace RestApiClient
             switch (method)
             {
                 case MethodsType.POST:
-                    SendPOST(objectToSend);
+                    SendPOST(objectToSend, serializeDataToSend);
                     break;
                 case MethodsType.PUT:
-                    SendPUT(objectToSend);
+                    SendPUT(objectToSend, serializeDataToSend);
                     break;
             }
         }
