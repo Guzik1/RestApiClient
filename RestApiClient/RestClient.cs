@@ -24,7 +24,7 @@ namespace RestApiClient
         MethodSender ms;
 
         /// <summary>
-        /// Inicjalize rest client with api url.
+        /// Inicjalize rest client with api url. Use default content type ("application/json").
         /// </summary>
         /// <param name="apiUri">Api url.</param>
         public RestClient(string apiUri)
@@ -33,6 +33,21 @@ namespace RestApiClient
 
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            ms = new MethodSender(client);
+        }
+
+        /// <summary>
+        /// Inicjalize rest client with api url and custom content type.
+        /// </summary>
+        /// <param name="apiUri">Api url.</param>
+        /// <param name="contentType">Content type string, default "application/json".</param>
+        public RestClient(string apiUri, string contentType = "application/json")
+        {
+            this.apiUri = apiUri;
+
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(contentType));
 
             ms = new MethodSender(client);
         }

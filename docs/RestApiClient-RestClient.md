@@ -7,6 +7,7 @@ public class RestClient
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &gt; [RestClient](./RestApiClient-RestClient.md 'RestApiClient.RestClient')  
 ### Constructors
 - [RestClient(string)](./RestApiClient-RestClient-RestClient(string).md 'RestApiClient.RestClient.RestClient(string)')
+- [RestClient(string, string)](./RestApiClient-RestClient-RestClient(string_string).md 'RestApiClient.RestClient.RestClient(string, string)')
 ### Properties
 - [GetResponseToString](./RestApiClient-RestClient-GetResponseToString.md 'RestApiClient.RestClient.GetResponseToString')
 - [GetStatusCode](./RestApiClient-RestClient-GetStatusCode.md 'RestApiClient.RestClient.GetStatusCode')
@@ -23,7 +24,7 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 - [ResponseHasNoErrors()](./RestApiClient-RestClient-ResponseHasNoErrors().md 'RestApiClient.RestClient.ResponseHasNoErrors()')
 - [ResponseHasNoErrors(RestApiClient.IResponseChecker)](./RestApiClient-RestClient-ResponseHasNoErrors(RestApiClient-IResponseChecker).md 'RestApiClient.RestClient.ResponseHasNoErrors(RestApiClient.IResponseChecker)')
 - [Send(RestApiClient.MethodsType)](./RestApiClient-RestClient-Send(RestApiClient-MethodsType).md 'RestApiClient.RestClient.Send(RestApiClient.MethodsType)')
-- [Send(RestApiClient.MethodsType, object)](./RestApiClient-RestClient-Send(RestApiClient-MethodsType_object).md 'RestApiClient.RestClient.Send(RestApiClient.MethodsType, object)')
+- [Send(RestApiClient.MethodsType, object, bool)](./RestApiClient-RestClient-Send(RestApiClient-MethodsType_object_bool).md 'RestApiClient.RestClient.Send(RestApiClient.MethodsType, object, bool)')
 - [SendDELETE()](./RestApiClient-RestClient-SendDELETE().md 'RestApiClient.RestClient.SendDELETE()')
 - [SendGET()](./RestApiClient-RestClient-SendGET().md 'RestApiClient.RestClient.SendGET()')
 - [SendPOST&lt;T&gt;(T, bool)](./RestApiClient-RestClient-SendPOST-T-(T_bool).md 'RestApiClient.RestClient.SendPOST&lt;T&gt;(T, bool)')

@@ -78,9 +78,16 @@
         </member>
         <member name="M:RestApiClient.RestClient.#ctor(System.String)">
             <summary>
-            Inicjalize rest client with api url.
+            Inicjalize rest client with api url. Use default content type ("application/json").
             </summary>
             <param name="apiUri">Api url.</param>
+        </member>
+        <member name="M:RestApiClient.RestClient.#ctor(System.String,System.String)">
+            <summary>
+            Inicjalize rest client with api url and custom content type.
+            </summary>
+            <param name="apiUri">Api url.</param>
+            <param name="contentType">Content type string, default "application/json".</param>
         </member>
         <member name="M:RestApiClient.RestClient.Send(RestApiClient.MethodsType)">
             <summary>
@@ -88,7 +95,7 @@
             </summary>
             <param name="method">Method type.</param>
         </member>
-        <member name="M:RestApiClient.RestClient.Send(RestApiClient.MethodsType,System.Object)">
+        <member name="M:RestApiClient.RestClient.Send(RestApiClient.MethodsType,System.Object,System.Boolean)">
             <summary>
             Send request with data using checked method.
             </summary>

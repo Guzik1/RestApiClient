@@ -1,6 +1,6 @@
 ### [RestApiClient](./RestApiClient.md 'RestApiClient').[RestClient](./RestApiClient-RestClient.md 'RestApiClient.RestClient')
 ## RestClient(string) Constructor
-Inicjalize rest client with api url.  
+Inicjalize rest client with api url. Use default content type ("application/json").  
 ```csharp
 public RestClient(string apiUri);
 ```
