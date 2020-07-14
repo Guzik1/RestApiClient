@@ -10,11 +10,11 @@
     <PackageId>GRestApiClient</PackageId>
     <Authors>Sebastian Guzik</Authors>
     <Company>Sebastian Guzik</Company>
-    <Version>1.2.6</Version>
-    <AssemblyVersion>1.2.6.0</AssemblyVersion>
-    <PackageReleaseNotes>Add new constructor with custom content type.</PackageReleaseNotes>
+    <Version>1.2.7</Version>
+    <AssemblyVersion>1.2.7.0</AssemblyVersion>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/Guzik1/RestApiClient_for_.Net</PackageProjectUrl>
-    <FileVersion>1.2.6.0</FileVersion>
+    <FileVersion>1.2.7.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

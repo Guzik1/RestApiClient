@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;  
+using System.Text;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
@@ -17,6 +17,7 @@ namespace RestApiClient
     public partial class RestClient
     {
         string apiUri;
+        string contentType;
 
         HttpClient client = new HttpClient();
         HttpResponseMessage response;
@@ -30,9 +31,10 @@ namespace RestApiClient
         public RestClient(string apiUri)
         {
             this.apiUri = apiUri;
+            contentType = "application/json";
 
             client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(contentType));
 
             ms = new MethodSender(client);
         }
@@ -45,6 +47,7 @@ namespace RestApiClient
         public RestClient(string apiUri, string contentType = "application/json")
         {
             this.apiUri = apiUri;
+            this.contentType = contentType;
 
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(contentType));
@@ -114,7 +117,7 @@ namespace RestApiClient
         public void SendPOST<T>(T dataToSend, bool serializeData = true)
         {
             AddHeaderToRequestPost<T>(dataToSend);
-            response = ms.PostMethod<T>(dataToSend, apiUri, serializeData);
+            response = ms.PostMethod<T>(dataToSend, apiUri, serializeData, contentType);
         }
 
         /// <summary>
@@ -135,7 +138,7 @@ namespace RestApiClient
         public void SendPUT<T>(T dataToSend, bool serializeData = true)
         {
             AddHeaderToRequest();
-            response = ms.PutMethod<T>(dataToSend, apiUri, serializeData);
+            response = ms.PutMethod<T>(dataToSend, apiUri, serializeData, contentType);
         }
 
         internal HttpClient GetHttpClient => client;
@@ -156,7 +159,7 @@ namespace RestApiClient
         /// Check response has no errors, with own response checker.
         /// </summary>
         /// <returns>True when response have no error, or false in else.</returns>
-        public bool ResponseHasNoErrors(IResponseChecker checker) 
+        public bool ResponseHasNoErrors(IResponseChecker checker)
             => ResponseHasSuccessStatusCode && checker.CheckResponseIsOk(GetResponseToString);
 
         /// <summary>
